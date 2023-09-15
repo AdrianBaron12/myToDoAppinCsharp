@@ -2848,19 +2848,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cebas\\.nuget\\packages\\": {}
+    "C:\\Users\\Sebastian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\csharp\\myToDoAppX\\myToDoAppX\\myToDoAppX.csproj",
+      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\GitHub\\myToDoAppinCsharp\\myToDoAppX\\myToDoAppX.csproj",
       "projectName": "myToDoAppX",
-      "projectPath": "E:\\csharp\\myToDoAppX\\myToDoAppX\\myToDoAppX.csproj",
-      "packagesPath": "C:\\Users\\cebas\\.nuget\\packages\\",
-      "outputPath": "E:\\csharp\\myToDoAppX\\myToDoAppX\\obj\\",
+      "projectPath": "C:\\Users\\Sebastian\\Documents\\GitHub\\myToDoAppinCsharp\\myToDoAppX\\myToDoAppX.csproj",
+      "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sebastian\\Documents\\GitHub\\myToDoAppinCsharp\\myToDoAppX\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2868,7 +2868,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2921,7 +2921,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
