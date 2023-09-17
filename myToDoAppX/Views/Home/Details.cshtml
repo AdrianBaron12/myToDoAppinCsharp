@@ -1,0 +1,23 @@
+﻿@model ToDoModel
+@{
+
+}
+<div class="text-center">
+    <h1>Task info</h1>
+    <br/>
+    <br />
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">@Model.Date</h6>
+            @if (Model.IsDone == true)
+            {
+                <span class="badge bg-primary">Done</span>
+            }
+            else
+            {
+                <span class="badge bg-danger">Not Done</span>
+            }
+        </div>
+    </div>
+</div>

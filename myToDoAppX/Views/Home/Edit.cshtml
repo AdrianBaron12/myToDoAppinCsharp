@@ -1,0 +1,28 @@
+﻿@model ToDoModel
+@{
+
+}
+
+<div class="text-center">
+    <h1>Edit Your Task</h1>
+    <br/>
+    <br />
+    <br />
+    <form method="post" asp-controller="Home" asp-action="Edit">
+        <div class="form-group">
+            <label for="exampleInputEmail1">ID</label>
+            <input type="email" asp-for="Id" class="form-control" value="@Model.Id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="">Date</label>
+            <input class="form-control" name="@Model.Date" value="@Model.Date" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Title</label>
+            <input type="text" name="Title" class="form-control" value="@Model.Title">
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    int Id = 0;
+}
+
+@model IEnumerable<myToDoAppX.Models.ToDoModel>
+
+<a asp-asp-controller="Home" asp-action="Create">Create New</a>
+
+<div class="text-center">
+    <table class="table" id="task-table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Done</th>
+                <th scope="col">Date</th>
+                <th scope="col">Title</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var task in Model ?? Enumerable.Empty<myToDoAppX.Models.ToDoModel>())
+            {
+                {
+                    Id = task.Id;
+                }
+            
+            <tr>
+              
+                 <th scope="row">@task.Id</th>
+                <td>
+                    <a asp-asp-controller="Home" asp-action="IsChecked" asp-route-id="@task.Id">
+                        <div id="checklist">
+                            <input checked="@task.IsDone" name="r" type="checkbox">
+                            <label>@task.Title</label>
+                        </div>
+
+                    </a>
+                    <input hidden class="task-id" value="@task.Id"/>
+                </td>
+                <td>
+                    @task.Date?.ToString("dd-MM-yy") ?? "N/A"
+                </td>
+                <td>
+                    <span class="@(!task.IsDone ? "badge bg-danger" :" badge bg-success")">@task.Title</span>
+                </td>
+                <td>
+                        @if (!task.IsDone)
+                        {
+                            <a asp-controller="Home" asp-action="Edit" asp-route-itemid="@task.Id"><img width="20px" src="https://img.icons8.com/?size=512&id=OWRPl8fxkRvG&format=png" /></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@task.Id"> <img width="20px" src="https://img.icons8.com/?size=512&id=13758&format=png" /> |</a>
+                            <a data-taskid="@task.Id" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img width="20px" src="https://img.icons8.com/?size=512&id=102350&format=png" /></a>
+                        }
+                    </td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--i got this script from the internet-->
+
+<script>
+    $(document).ready(function () {
+        $('.delet').click(function () {
+            let taskID = $('.task-id').val(); // Use data-taskid attribute
+
+            console.log("ajax");
+            $.ajax({
+                url: '/Home/Delete',
+                type: 'POST',
+                data: {
+                    id: taskID,
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert("DELETED");
+                    }
+                },
+                error: function () {
+                    alert("An error occurred while deleting task.");
+                }
+            });
+        });
+    });
+
+
+</script>
