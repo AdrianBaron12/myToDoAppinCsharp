@@ -3,7 +3,8 @@
     int Id = 0;
 }
 
-@model List<ToDoModel>
+@model IEnumerable<myToDoAppX.Models.ToDoModel>
+
 <a asp-asp-controller="Home" asp-action="Create">Create New</a>
 
 <div class="text-center">
@@ -19,7 +20,7 @@
         </thead>
 
         <tbody>
-            @foreach(var task in Model)
+            @foreach(var task in Model ?? Enumerable.Empty<myToDoAppX.Models.ToDoModel>())
             {
                 {
                     Id = task.Id;
@@ -62,7 +63,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-i got this script from the internet-->
+<!--i got this script from the internet-->
 
 <script>
     $(document).ready(function () {
